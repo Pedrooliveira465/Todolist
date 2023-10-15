@@ -12,6 +12,9 @@ COPY . .
 RUN apt-get install maven -y        
 RUN mvn clean install
 
+# Imagem base para depois de instalar o jdk ele poder rodar o projeto
+FROM openjdk:17-jdk-slim
+
 # Expõe a porta da aplicação
 EXPOSE 8080
 
