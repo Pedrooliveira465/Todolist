@@ -19,7 +19,7 @@ FROM openjdk:17-jdk-slim
 EXPOSE 8080
 
 # Faz uma cópia do todolist.jar e coloca em outro arquivo, nesse caso no app.jar
-COPY --from=build /target/todolist-0.0.1.jar app.jar
+COPY --from=build /target/todolist-0.0.1-SNAPSHOT.jar app.jar
 
 # Roda o projeto
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
